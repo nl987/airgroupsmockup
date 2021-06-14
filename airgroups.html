@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Airgroup management</title>
+    <style>
+      form {
+        float: left;
+      }
+      table {
+        border: 2px solid black;
+      }
+      .tabs {
+        display: flex;
+        align-items: flex-end;
+      }
+      .tab {
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+        border-right: 2px solid black;
+        padding: 5px;
+        border-radius: 5px 5px 0 0;
+        bottom: 0;
+      }
+      .tab:not(.this) {
+        background: grey;
+        height: 20px;
+      }
+      .this {
+        padding: 10px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="index.html">Airgroup management</a></h1>
+    <div class="tabs">
+      <div class="tab"><a href="devices.html">Manage Devices</a></div>
+      <div class="tab this">Manage Airgroups</div>
+    </div>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Number of devices</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td><input id="newname"/></td>
+        <td> </td>
+        <td><button onclick="add()">Create</button></td>
+      </tr>
+      <tr>
+        <td>test456</td>
+        <td>5</td>
+        <td>
+          <form action="edit_airgroup.html">
+            <button type="submit">Edit</button>
+          </form>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>JeffJeff</td>
+        <td>3</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>testy333</td>
+        <td>4</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>Hut_six</td>
+        <td>7</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>ThatBuildingOverThere</td>
+        <td>3</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+    </table>
+    <script>
+      function add() {
+        document.getElementById("newname").value = "";
+        document.getElementById("newgroups").value = "";
+      }
+    </script>
+  </body>
+</html>

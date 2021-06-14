@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <title>Airgroup management</title>
+    <style>
+      form {
+        float: left;
+      }
+      table {
+        border: 2px solid black;
+      }
+      .tabs {
+        display: flex;
+        align-items: flex-end;
+      }
+      .tab {
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+        border-right: 2px solid black;
+        padding: 5px;
+        border-radius: 5px 5px 0 0;
+        bottom: 0;
+      }
+      .tab:not(.this) {
+        background: grey;
+        height: 20px;
+      }
+      .this {
+        padding: 10px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="index.html">Airgroup management</a></h1>
+    <div class="tabs">
+      <div class="tab this">Manage Devices</div>
+      <div class="tab"><a href="airgroups.html">Manage Airgroups</a></div>
+    </div>
+    <table>
+      <tr>
+        <th>MAC Address</th>
+        <th>Airgroups</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td><input id="newname"/></td>
+        <td>
+          <select id="newgroups" multiple>
+            <option>test456</option>
+            <option>JeffJeff</option>
+            <option>testy333</option>
+            <option>Hut_six</option>
+            <option>ThatBuildingOverThere</option>
+          </select>
+        </td>
+        <td><button onclick="add()">Create</button></td>
+      </tr>
+      <tr>
+        <td>91:35:CA:2C:17:F5</td>
+        <td>test456, Hut_six</td>
+        <td>
+          <form action="edit_device.html">
+            <button type="Submit">Edit</button>
+          </form>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>F0:40:15:98:22:FD</td>
+        <td>JeffJeff, Hut_six</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>C1:C8:EB:BE:1D:A4</td>
+        <td>test456</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>78:EB:9F:72:48:AE</td>
+        <td>ThatBuildingOverThere</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>CB:AD:C4:4B:4B:3E</td>
+        <td>testy333, Hut_six</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>60:3D:6F:8F:96:D4</td>
+        <td>ThatBuildingOverThere</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>39:F6:03:DF:40:51</td>
+        <td></td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>37:B9:5B:09:4C:85</td>
+        <td>JeffJeff, Hut_six</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>53:49:1E:F5:73:14</td>
+        <td>test456, JeffJeff, Hut_six</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>CC:AE:89:3E:74:11</td>
+        <td>test456, testy333</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>B5:BC:49:67:A8:36</td>
+        <td>testy333</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>8C:B6:6A:23:42:21</td>
+        <td></td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>71:8A:F7:97:47:3B</td>
+        <td>test456, ThatBuildingOverThere</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>09:25:29:9D:FB:9E</td>
+        <td>testy333, Hut_six</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+      <tr>
+        <td>99:C5:69:A6:7D:91</td>
+        <td>Hut_six</td>
+        <td><button>Edit</button><button>Delete</button></td>
+      </tr>
+    </table>
+    <script>
+      function add() {
+        document.getElementById("newname").value = "";
+        document.getElementById("newgroups").selectedIndex = -1;
+      }
+    </script>
+  </body>
+</html>
