@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Airgroup management</title>
+    <title>WIDI management: Edit Building</title>
     <style>
       form {
         float: left;
@@ -31,49 +31,56 @@
     </style>
   </head>
   <body>
-    <h1><a href="index.html">Airgroup management</a></h1>
+    <h1><a href="index.html">WIDI management</a></h1>
+    <p>This is an admin function and should only be visible to &quot;admins&quot;.</p>
     <div class="tabs">
       <div class="tab"><a href="devices.html">Manage Devices</a></div>
-      <div class="tab this">Manage Airgroups</div>
+      <div class="tab this">Manage Buildings</div>
     </div>
     <table>
       <tr>
-        <th>Name</th>
-        <th>Number of devices</th>
+        <th>Building</th>
+        <th>Airgroups</th>
         <th>Actions</th>
       </tr>
       <tr>
         <td><input value="test456" /></td>
-        <td>5</td>
+        <td><input value="test, test_5g" /></td>
         <td>
-          <form action="airgroups.html">
+          <form action="buildings.html">
             <button type="submit">Save</button>
           </form>
-          <form action="airgroups.html">
+          <form action="buildings.html">
             <button type="submit">Cancel</button>
           </form>
         </td>
       </tr>
       <tr>
         <td>JeffJeff</td>
-        <td>4</td>
+        <td>JeffJeff, JeffJeff_5g</td>
         <td><button>Edit</button><button>Delete</button></td>
       </tr>
       <tr>
         <td>testy333</td>
-        <td>5</td>
+        <td>testy333</td>
         <td><button>Edit</button><button>Delete</button></td>
       </tr>
       <tr>
         <td>Hut_six</td>
-        <td>7</td>
+        <td>Hut_six, Hut_six_dev</td>
         <td><button>Edit</button><button>Delete</button></td>
       </tr>
       <tr>
         <td>ThatBuildingOverThere</td>
-        <td>3</td>
+        <td>TheWeirdlyNamedAirgroupInThatBuildingOverThere, TheWeirdlyNamedAirgroupInThatBuildingOverThere_5g</td>
         <td><button>Edit</button><button>Delete</button></td>
       </tr>
     </table>
+    <script>
+      function add() {
+        document.getElementById("newname").value = "";
+        document.getElementById("newgroups").value = "";
+      }
+    </script>
   </body>
 </html>
